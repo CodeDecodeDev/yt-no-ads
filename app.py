@@ -11,7 +11,7 @@ def main_page():
         elif len(vid_url) == 43:
             vid_url_id = vid_url[32:]
         else:
-            return "<h1>Error, make sure the URL is correct and the are not time stamps at the end of the url<h1> \n <h6>(Time stamps = &t=x)<h6>"
+            return "<h1>Error, make sure the URL is correct and the are not time stamps at the end of the url<h1> \n <h3>(Time stamps = &t=x)<h3>"
         return redirect(url_for("video_page", vid_id = vid_url_id))
     else:
         return render_template("home.html")
